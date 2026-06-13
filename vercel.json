@@ -1,8 +1,5 @@
 {
-  "version": 2,
-  "framework": "vite",
-  "buildCommand": "bun run build || npm run build",
-  "outputDirectory": "dist",
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/(.*)",
