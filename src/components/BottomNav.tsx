@@ -2,13 +2,14 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Home, LayoutGrid, ShoppingBag, Gift, User } from "lucide-react";
 import { useCart } from "@/lib/cart";
 
-const tabs = [
+type Tab = { to: string; label: string; icon: typeof Home; exact?: boolean; badge?: boolean };
+const tabs: Tab[] = [
   { to: "/", label: "Головна", icon: Home, exact: true },
   { to: "/catalog", label: "Каталог", icon: LayoutGrid },
   { to: "/cart", label: "Кошик", icon: ShoppingBag, badge: true },
   { to: "/loyalty", label: "Бонуси", icon: Gift },
   { to: "/profile", label: "Профіль", icon: User },
-] as const;
+];
 
 export function BottomNav() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
