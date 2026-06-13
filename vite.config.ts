@@ -7,7 +7,7 @@ export default defineConfig({
 
   vite: {
     build: {
-      outDir: "dist/client",
+      outDir: "dist",
     },
   },
 });
